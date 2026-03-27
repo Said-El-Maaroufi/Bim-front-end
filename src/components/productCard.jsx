@@ -17,7 +17,7 @@ const ProductCard = ({products}) => {
                             <img  src="" alt="BIM-IMAGE" className="card-img-top object-fit-contain " />
                         </div>
                     <div className="card-body card-product">
-                        <h3 className=" custom-badge badge-soft-amber">family </h3>
+                        <h3 className=" custom-badge badge-soft-amber">{pdt.code.substr(0, 3)} </h3>
                         <div className="mb-3">
 
                             <span className="custom-badge badge-soft-blue"

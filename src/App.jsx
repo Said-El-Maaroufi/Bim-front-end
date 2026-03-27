@@ -1,5 +1,7 @@
 import Input from "./components/searchBar"
+import AddProduit from "./components/addProduit";
 import { useState } from "react";
+import {  Routes, Route } from "react-router-dom";
 
 
 function App() {
@@ -43,10 +45,17 @@ function App() {
   
 
   return (
-    <>
-      <Input products={products} setProducts={setProducts}/>
+
+      <Routes>
+        <Route path="/" element={<Input products={products} setProducts={setProducts}/>}/>
+        <Route path="/addProduit" element={<AddProduit products={products} setProducts={setProducts}/>}/>
+        <Route path="*" element={<Input products={products} setProducts={setProducts}/>}/>
+
+      </Routes>
+    // <>
+    //   <Input products={products} setProducts={setProducts}/>
      
-    </>
+    // </>
   )
 }
 

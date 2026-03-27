@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ProductCard from "./productCard";
+import { Link } from "react-router-dom";
 const Input = ({products}) => {
     
     
@@ -34,7 +35,11 @@ const handelValue = (e) =>{
 
     return ( 
         <div className="container">
-            <input type="text" className="form-control mt-3" onInput={handelValue} />
+            <div className="input-group mt-3">
+
+            <input type="text" className="form-control " onInput={handelValue} />
+            <Link to="/addProduit" className="btn btn-primary">Ajouter</Link>
+            </div>
              
             
                 
