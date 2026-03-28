@@ -38,7 +38,7 @@ const handelValue = (e) =>{
             <div className="input-group mt-3">
 
             <input type="text" className="form-control " onInput={handelValue} />
-            <Link to="/addProduit" className="btn btn-primary">Ajouter</Link>
+            <Link to="/addMethods" className="btn btn-primary">Ajouter</Link>
             </div>
              
             

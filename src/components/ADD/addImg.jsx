@@ -1,5 +1,5 @@
 
-const AddProduit = () => {
+const AddImg = () => {
     return ( 
         <div className="container ">
 
@@ -12,4 +12,4 @@ const AddProduit = () => {
     );
 }
 
-export default AddProduit;
+export default AddImg;
