@@ -20,15 +20,13 @@ const AddForm = ({products, setproducts}) => {
     }
 
     const add = () => {
-        console.log('im herre')
-        let res = Object.values(formData).some((value) => value.trim() === '')
-        if(res === true ){
-            setError("<p className='alert alert-danger'>il ya un champ vide</p>")
+        let res = Object.values(formData).some((values) => values.trim() == '')
+        if(res){
+            setError(<p className='alert alert-danger'>il ya un champ vide</p>)
         } else{
-            setError("<p className='alert alert-success'>le produit a ete ajouter avec succeess</p>")
-            setproducts([...products, formData])
+            setproducts([...products, {formData}])
+            setError(<p className='alert alert-success'>le produit a ete ajouter avec succeess</p>)
         }
-        setError('')
     }
 
 
@@ -47,9 +45,10 @@ const AddForm = ({products, setproducts}) => {
         },
  */
         <div className="container mt-3">
-            <form action="" className="border m-3 p-2">
+            <form action="" className="border m-3 p-2" >
                 <h2 className="text-center bg-secondary p-2 text-light">Ajouter un Produit</h2>
-                {error||<p className="alert alert-danger">hi</p>}
+                <div>{error}</div>
+                
                 <div className="container">
 
                 <div className="my-4 ">
@@ -85,7 +84,7 @@ const AddForm = ({products, setproducts}) => {
                     <input type="number" name="Qte" value={formData.Qte} onChange={handelValue} className="form-control" />
                 </div>
                 <div className="d-grid">
-                    <button type="button" className=" btn btn-outline-success " onClick={add}>Ajouter</button>
+                    <button type="button" className=" btn btn-outline-success" onClick={add}>Ajouter</button>
                 </div>
                 </div>
             </form>
