@@ -14,7 +14,7 @@ const ProductCard = ({products}) => {
 
                     <div className="card w-75   text-center m-auto  shadow" style={{ minWidth: '196px' }}>
                         <div className="ratio ratio-21x9 ">
-                            <img  src="" alt="BIM-IMAGE" className="card-img-top object-fit-contain " />
+                            <img  src={pdt.image} alt="BIM-IMAGE" className="card-img-top object-fit-contain " />
                         </div>
                     <div className="card-body card-product">
                         <h3 className=" custom-badge badge-soft-amber">{pdt.code.substr(0, 3)} </h3>
